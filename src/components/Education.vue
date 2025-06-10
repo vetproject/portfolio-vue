@@ -1,29 +1,25 @@
 <template>
-    <div class="education">
-        <h1>Education & Work</h1>
-        <p>This section highlights my educational background and achievements.</p>
-        <p>Below is a timeline of my academic journey and qualifications.</p>
-    </div>
-    <div class="timeline">
-
-        <div v-for="(item, index) in timelineItems" :key="index" :class="['timeline-item', item.position]">
-            <div v-if="item.position === 'left'" class="timeline-content">
-                <h2>{{ item.title }}</h2>
-                <h3 class="school">{{ item.school }}</h3>
-                <p v-html="item.description"></p>
-            </div>
-            <div class="timeline-date">
-                <!-- <span class="icon" v-html="item.icon"></span> -->
-                <span>{{ item.date }}</span>
-            </div>
-            <div v-if="item.position === 'right'" class="timeline-content">
-                <h2>{{ item.title }}</h2>
-                <h3 class="school">{{ item.school }}</h3>
-                <p v-html="item.description"></p>
+    <div>
+        <div class="education">
+            <h1>Education & Work</h1>
+            <p>This section highlights my educational background and achievements.</p>
+            <p>Below is a timeline of my academic journey and qualifications.</p>
+        </div>
+        <div class="timeline">
+            <div v-for="(item, index) in timelineItems" :key="index" :class="['timeline-item', item.position]">
+                <div class="timeline-date">
+                    <span>{{ item.date }}</span>
+                </div>
+                <div class="timeline-content">
+                    <h2>{{ item.title }}</h2>
+                    <h3 class="school">{{ item.school }}</h3>
+                    <p v-html="item.description"></p>
+                </div>
             </div>
         </div>
     </div>
 </template>
+
 <script>
 export default {
     name: 'EducationPort',
@@ -66,12 +62,12 @@ export default {
                     icon: '&#128269;',
                     date: 'MAR - MAY 2015',
                 },
-                
             ],
         };
     },
 };
 </script>
+
 <style scoped>
 .education {
     width: 50%;
@@ -94,7 +90,6 @@ export default {
     margin: 40px auto;
     padding: 40px 0;
 }
-
 .timeline:before {
     content: '';
     position: absolute;
@@ -107,7 +102,6 @@ export default {
     z-index: 0;
     border-radius: 2px;
 }
-
 .timeline-item {
     display: flex;
     justify-content: flex-end;
@@ -117,19 +111,16 @@ export default {
     padding: 30px 40px;
     box-sizing: border-box;
 }
-
 .timeline-item.left {
     left: 0;
     flex-direction: row;
     text-align: left;
 }
-
 .timeline-item.right {
     left: 50%;
     flex-direction: row-reverse;
     text-align: left;
 }
-
 .timeline-content {
     background: #181d23;
     color: #fff;
@@ -141,32 +132,27 @@ export default {
     position: relative;
     z-index: 2;
 }
-
 .timeline-content h2 {
     margin: 0 0 8px 0;
     font-size: 1.25rem;
     font-weight: bold;
     letter-spacing: 1px;
 }
-
 .timeline-content .school {
     color: #19d4d4;
     font-size: 1rem;
     margin-bottom: 12px;
     margin-top: 0;
 }
-
 .timeline-content p {
     margin: 0;
     font-size: 1rem;
     line-height: 1.6;
 }
-
 .timeline-content strong {
     color: #fff;
     font-weight: bold;
 }
-
 .timeline-date {
     display: flex;
     flex-direction: column;
@@ -184,53 +170,62 @@ export default {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     border: 4px solid #19d4d4;
 }
-
 .timeline-item.left .timeline-date {
     right: -35px;
 }
-
 .timeline-item.right .timeline-date {
     left: -35px;
 }
-
 .timeline-date .icon {
     font-size: 1.6rem;
     margin-bottom: 4px;
     color: #19d4d4;
 }
-span{
+span {
     font-size: 6px;
     color: #fff;
 }
 
+/* Responsive styles for mobile */
 @media (max-width: 600px) {
+    .education {
+        width: 95%;
+        margin: 0 auto;
+    }
+    .timeline {
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 0;
+    }
     .timeline:before {
         left: 20px;
         transform: none;
+        width: 2px;
     }
-
     .timeline-item,
     .timeline-item.left,
     .timeline-item.right {
         width: 100%;
-        left: 0px;
-        flex-direction: row;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-start;
         text-align: left;
-        padding-left: 70px;
-        padding-right: 20px;
+        padding: 20px 10px 20px 50px;
+        margin-bottom: 30px;
+        box-sizing: border-box;
     }
-    .timeline-item.left .timeline-date {
-        left: -15px;
+    .timeline-content {
+        min-width: 0;
+        max-width: 100%;
+        margin-top: 10px;
+        padding: 18px 14px;
     }
-    .timeline-item.right .timeline-date {
-        left: -15px;
-    }
-
-    .timeline{
-        margin-left:18px ;
-    }
-    .education{
-        width: 90%;
+    .timeline-date {
+        position: static;
+        margin-bottom: 10px;
+        width: 48px;
+        height: 48px;
+        font-size: 0.85rem;
     }
 }
 </style>
