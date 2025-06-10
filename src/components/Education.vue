@@ -33,7 +33,7 @@ export default {
                     description:
                         'Developed websites using HTML, CSS, JavaScript, PHP, and MySQL.<br></br>Created user-friendly web applications.<br></br>Managed databases with MySQL for efficient data access.<br></br>Developed the Buspad app using Java/Kotlin in Android Studio.<br></br>Designed simple screens and implemented real-time update features.<br></br>Tested the app to ensure reliability and performance.',
                     icon: '&#127891;',
-                    date: 'DEC 2024 - PRESENT',
+                    date: 'DEC 2024 - PRE',
                 },
                 {
                     position: 'right',
