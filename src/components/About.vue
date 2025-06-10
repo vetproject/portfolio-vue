@@ -1,7 +1,7 @@
 <template>
     <div class="about-container">
         <div class="about-left">
-            <h1>Hey, I'm Brittany.</h1>
+            <h1>Hey, I'm  <span style="color: aqua;">RIN</span>.</h1>
             <h2>
                 I'm a web developer passionate about combining beautiful code with beautiful design.
             </h2>
