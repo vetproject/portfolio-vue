@@ -1,7 +1,7 @@
 <template>
   <div class="intro">
     <h1>YOUERN RIN</h1>
-    <h2>FRONT END SOFTWARE ENGINEER</h2>
+    <h2>WEB DEVELOPER</h2>
   </div>
 </template>
 

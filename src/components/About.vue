@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import userImage from '@/assets/userport.jpg';
+import userImage from '@/assets/user.png';
 
 export default {
     name: 'AboutPor',

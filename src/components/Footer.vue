@@ -1,22 +1,22 @@
 <template>
     <footer class="footer">
         <div class="footer-icons">
-            <a href="mailto:ofr@email.com" aria-label="Email">
+            <a href="#" aria-label="Email">
                 <i class="fas fa-envelope"></i>
             </a>
-            <a href="https://twitter.com/ofr" target="_blank" aria-label="Twitter">
+            <a href="#" target="_blank" aria-label="Twitter">
                 <i class="fab fa-twitter"></i>
             </a>
-            <a href="https://instagram.com/ofr" target="_blank" aria-label="Instagram">
+            <a href="#" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://codepen.io/ofr" target="_blank" aria-label="CodePen">
+            <a href="#" target="_blank" aria-label="CodePen">
                 <i class="fab fa-codepen"></i>
             </a>
-            <a href="https://github.com/ofr" target="_blank" aria-label="GitHub">
+            <a href="#" target="_blank" aria-label="GitHub">
                 <i class="fab fa-github"></i>
             </a>
-            <a href="https://linkedin.com/in/ofr" target="_blank" aria-label="LinkedIn">
+            <a href="#" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin-in"></i>
             </a>
         </div>
