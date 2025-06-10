@@ -107,7 +107,7 @@ export default {
 .about-img-wrapper {
     width: 320px;
     height: 320px;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 50%;
     display: flex;
     align-items: center;
